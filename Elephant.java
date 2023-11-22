@@ -11,5 +11,15 @@ public class Elephant extends Actor
             move(2);
         }
         
+        // Eat the apple
+        if (isTouching(Apple.class)){
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnApple();
+        }
     }
+    
+    // public void move(int x) {
+        // System.out.println("Don't touch me.");
+    // }
 }
