@@ -53,6 +53,17 @@ public class Elephant extends Actor
         }
 
         eat();
+        checkIfLeftScreen();
+    }
+    
+    /**
+     * Check if elephant left the screen to the left
+     */
+    public void checkIfLeftScreen(){
+        if(getX() < 0) {
+            MyWorld world = (MyWorld) getWorld();
+            world.toTitleWorld();
+        }
     }
 
     /**

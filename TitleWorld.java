@@ -11,7 +11,7 @@ public class TitleWorld extends World
     
     public void act() {
         if(Greenfoot.mouseClicked(null)){
-            MyWorld world = new MyWorld();
+            MyWorld world = new MyWorld(this);
             Greenfoot.setWorld(world);
         }
     }

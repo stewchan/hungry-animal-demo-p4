@@ -2,12 +2,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class MyWorld extends World
 {
+    public TitleWorld titleWorld;
     private int score = 0;
     private Label scoreLabel;
     
-    public MyWorld()
+    public MyWorld(TitleWorld titleWorld)
     {    
         super(600, 400, 1, false);
+        this.titleWorld = titleWorld;
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 300);
         spawnApple();
@@ -16,6 +18,11 @@ public class MyWorld extends World
         addObject(scoreLabel, 50, 50);
 
     }
+    
+    public void toTitleWorld() {
+        Greenfoot.setWorld(titleWorld);
+    }
+    
     
     /**
      * Called when game is over
