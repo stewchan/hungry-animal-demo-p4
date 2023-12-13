@@ -52,6 +52,14 @@ public class Elephant extends Actor
             move(2);
         }
 
+        MouseInfo mouseInfo = Greenfoot.getMouseInfo();
+        if(mouseInfo != null) {
+            int x = mouseInfo.getX();
+            int y = mouseInfo.getY();
+            setLocation(x, y);
+    
+        }
+        
         eat();
         checkIfLeftScreen();
     }
