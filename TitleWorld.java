@@ -7,6 +7,10 @@ public class TitleWorld extends World
         super(600, 400, 1); 
         Label titleLabel = new Label("Hungry Elephant", 80);
         addObject(titleLabel, getWidth()/2, getHeight()/2);
+        
+        Banana banana = new Banana();
+        addObject(banana, 0, 0);
+        // banana.setLocation(getWidth()/2, getHeight()/2);
     }
     
     public void act() {
